@@ -13,7 +13,7 @@ var watchSchema = new Schema({
     }},
     watchSex:{type:String,required:[true,'Enter sex of watch !'],trim:true,enum:['Mężczyzna','Kobieta']},
     watchGlass:{type:String,required:true,trim:true,enum:['Mineralne','Szafirowe']},
-    watchMechanism:{type:String,required:true,trim:true,enum:['Kwarcowy','Solarny']},
+    watchMechanism:{type:String,required:true,trim:true,enum:['Kwarcowy','Solarny','Automatyczny']},
     watchEnvelopeMaterial:{type:String,required:true,trim:true},
     watchBeltMaterial:{type:String,required:true,trim:true},
     watchStyle:{type:String,required:true,trim:true},
@@ -43,6 +43,11 @@ var watchSchema = new Schema({
         }
     }},
     watchPhotos:[{type:String}],
+    addDate:{type:Date},
+    watchNew:{type:Boolean,default:true},
+    watchOverallRatio:{type:Number,default:5},
+    watchNumberOfComments:{type:Number,default:0},
+
     comments:[{
         comment:{type:String,required:[true,'Comment is required !'],trim:true,minlength:2,validate(value) {
             if(validator.isEmpty(value)) {
@@ -50,7 +55,7 @@ var watchSchema = new Schema({
             }
         }},
         commentDate:{type:Date,default:Date.now},
-        commentRatio:{type:Number,default:2.5,min:0,max:5},
+        commentRatio:{type:Number,default:2.5,min:0,max:10},
         postedBy:{type:Schema.Types.ObjectId,
             ref:"User",
             required:true

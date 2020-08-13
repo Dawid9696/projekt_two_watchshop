@@ -1,0 +1,133 @@
+.news {
+    margin:0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.news-cards {
+    margin: 0px;
+    padding: 0px;
+    width:1280px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.news-card {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 5px 10px 8px #888888;
+    border:1px solid rgb(95, 95, 95);
+    position: relative;
+    text-decoration:none;
+}
+
+.news-card::before {
+    display: flex;
+    content:'Spawdź szczegóły';
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.253);
+    display: none;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+    transition: all 500ms;
+    cursor: pointer;
+}
+
+.news-card:hover::before {
+    display:block;
+    z-index: 20;
+}
+
+.Card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:3px;
+    padding:0px;
+    width: 230px;
+    box-sizing: border-box;
+}
+
+.Card-button-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:3px;
+    padding:0px;
+    width:50%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    color:darkmagenta;
+}
+
+.Card-button-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:3px;
+    padding:0px;
+    width:50%;
+    height: 100%;
+    border-radius: 5px;
+    color:darkmagenta;
+}
+
+.Card-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0px;
+    margin: 5px;
+    top: 0;
+    right: 0;
+}
+
+.Card-icons > div {
+    margin: 4px;
+}
+
+.Card-Ulubione:hover {
+    color:blue;
+    transform: scale(1.05);
+}
+
+.Card-icons-wish {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0px;
+    margin: 5px;
+    top: 0;
+    left: 0;
+}

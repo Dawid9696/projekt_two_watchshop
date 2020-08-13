@@ -1,0 +1,238 @@
+.Favorite {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Favorite-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color:white;
+}
+
+.Favorite-description-div{
+  color:white;
+  position: relative;
+  content: '';
+  z-index: 10;
+  width: 50px;
+  height: 100px;
+  margin: 15px;
+  padding: 0px;
+  width: 500px;
+  background-color: white;
+  border: 5px solid white;
+  box-shadow: 10px 10px  10px rgb(80, 80, 80);
+  border-radius: 5px;
+}
+
+.Favorite-description-div:before{
+  color:white;
+  position: absolute;
+  content: '';
+  top:0px;
+  z-index: 10;
+  left: 0px;
+  width: 100%;
+  height:100%;
+  margin: 0px;
+  padding: 0px;
+  width: 500px;
+  box-shadow: inset 2px 10px 2px rgb(80, 80, 80);
+  background-color: rgb(252, 252, 252);
+  border: 5px solid white;
+  border-radius: 10px;
+
+}
+
+.Favorite-description-div-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color:black;
+  position: absolute;
+  z-index: 11;
+  width: 50%;
+  height: 50%;
+  top:25%;
+  left:25%;
+  background-color: white;
+ 
+}
+
+
+.Favorite-container {
+    position: relative;
+    height: 300px;
+    width: 600px;
+    margin:50px;
+    display: flex;
+  }
+  
+  .Favorite-card {
+    display: flex;
+    height: 280px;
+    width: 200px;
+    background-color: #17141d;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+  
+  .Favorite-card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .Favorite-card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .Favorite-card:hover ~ .Favorite-card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .Favorite-title {
+    color: rgb(158, 0, 0);
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+  
+  .Favorite-bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+  
+  .Favorite-emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .Favorite-filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0,154,217);
+    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    transition: 0.6s ease-out;
+  }
+  
+  .Favorite-card:hover .Favorite-filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+  
+  .Favorite-circle {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 60px);
+    filter: blur(5px);
+  }
+  
+  .Favorite-stroke {
+    stroke: rgb(240, 8, 8);
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+  }
+  
+  Favorite-svg {
+    fill: #17141d00;
+    stroke-width: 5px;
+    
+  }
+  
+  .Favorite-card:hover .Favorite-stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+  }
+
+
+  //####################################################
+
+  .flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 600px;
+    margin:100px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 10px #444444;
+    background-color:#ffffff;
+    padding: 20px;
+    border: 1px solid black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color:#17141d;
+    border:5px solid white;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back-style {
+    padding: 0px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-card-back-style:hover {
+    cursor: pointer;
+  }

@@ -1,0 +1,117 @@
+.Profile {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:0px;
+    padding:20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.Profile > div{
+    margin: 20px;
+}
+
+.Profile-Panel {
+    margin:0px;
+    padding:0px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgb(184, 184, 184);
+}
+
+.Profile-Panel-Options {
+    margin: 10px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Profile-Panel-Options > div{
+    margin: 5px;
+}
+
+
+.Profile-Panel-Options-List > li:hover {
+    cursor: pointer;
+}
+
+.Profile-Panel-Image {
+    margin: 0px;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Profile-Panel-Image-Logo {
+    color: white;
+    margin: 15px;
+    padding: 0px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(65, 65, 204);
+}
+
+.Profile-Window {
+    margin:0px;
+    padding:0px;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ProfileDiv .ProfileForumlar .ProfileFieldset{
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfileFieldset > label {
+    margin: 5px;
+}
+
+
+.ProfileFieldset > button {
+    margin: 20px;
+}
+
+
+.ProfilePrivacy .ProfilePrivacy-form .ProfilePrivacy-fieldset{
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

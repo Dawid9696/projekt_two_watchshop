@@ -1,0 +1,99 @@
+.Best {
+    margin:50px 0px 50px 0px;
+    padding: 0px;
+    width: 1250px;
+    display: flex;
+    color: Black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.Best-hidden-desc {
+    height:100%;
+    width: 650px;
+    position: absolute;
+    background-color: rgb(49, 49, 49);
+    left:-200;
+    transition: all 1s;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.Best-cards {
+    color:black;
+    margin: 40px;
+    padding: 20px;
+    width:660px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    background:linear-gradient(0deg,#000,#262626);
+    position: relative; 
+    left:0px;
+    transition: all 1s;
+    border-radius: 15px;
+}
+
+.Best-cards:before {
+    content:'';
+    position:absolute;
+    top:-10px;
+    left:-10px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+    background-size: 400%;
+    height: calc(100% + 20px);
+    width: calc(100% + 20px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+.Best-cards:before {
+    filter: blur(20px);
+}
+
+@keyframes animate 
+    {
+        0%
+        {
+            background-position: 0 0;
+        }
+        50%
+        {
+            background-position: 400% 0;
+        }
+        100%
+        {
+            background-position: 0 0;
+        }
+    }
+
+
+
+//###################3
+.Best-card {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border:1px solid rgb(95, 95, 95);
+    position: relative;
+    background-color: white;
+    text-decoration: none;
+}
+
+.Best-card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 500ms;
+}

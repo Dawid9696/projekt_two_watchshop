@@ -1,0 +1,72 @@
+.LoginRegister {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:white;
+    margin:40px;
+    padding:0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    box-shadow: 5px 10px 8px #888888;
+
+}
+
+.Login {
+    flex: 1;
+    background-color: white;
+    margin:10px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.Register {
+    flex: 1;
+    background-color: white;
+    margin:10px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.formular {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    margin:10px;
+    width: 30vw;
+}
+
+.MyProfileDeleteAcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    color:wheat;
+    background-color: rgb(255, 44, 44);
+    position: relative;
+}
+
+.MyProfileDeleteAcc:hover {
+    background-color: rgb(255, 30, 30);
+    transform: scale(1.05);
+}
